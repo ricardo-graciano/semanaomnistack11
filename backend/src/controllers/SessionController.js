@@ -3,7 +3,7 @@ const connection = require('../database/connection')
 module.exports = {
     create: async(req, res) => {
         const { id } = req.body
-
+        console.log(id);
         const ong = await connection('ongs')
             .where('id', id)
             .select('name')
